@@ -9,6 +9,7 @@ int main()
         for(j=1;j<=n;j++)
         {
             if((i+j)%2==0)
+            
                 printf("1\t");
             else
                 printf("0\t");
