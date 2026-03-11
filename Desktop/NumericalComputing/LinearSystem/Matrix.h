@@ -1,3 +1,6 @@
+#ifndef MATRIX_H
+#define MATRIX_H
+
 #include <vector>
 #include<iostream>
 #include<fstream>
@@ -6,20 +9,37 @@ using namespace std;
 
 class Matrix{
     protected:
-        int n;
+        int rows ,cols ;
         vector<vector<double>>a;
 
     public:
         Matrix();
-        Matrix(int sz);
+        Matrix(int rows,int cols);
         Matrix(const Matrix &m);
-        ~Matrix();
-        void readFromFiles(ifstream &left, ifstream &right);
-        void writeSolution(ofstream &out, const vector<double>& x);
-        void display();
-        Matrix operator+(const Matrix & m);
-        Matrix operator-(const Matrix & m);
-        Matrix operator*(const Matrix & m);
-        int sz()const;
-       // vector<vector<double>>getMatrix()const
+        void readFromFile(ifstream &fin);
+        void displayToFile(ofstream &fout) const;
+        // void readFromFiles(ifstream &left, ifstream &right);
+        // void writeSolution(ofstream &out, const vector<double>& x);
+        //void display();
+        Matrix operator+(const Matrix & m)const;
+        Matrix operator-(const Matrix & m)const;
+        Matrix operator*(const Matrix & m)const;
+        double &operator()(int i,int j);
+        double operator()(int i,int j)const;
+        bool operator==(const Matrix &m)const;
+        friend istream &operator>>(istream &in ,Matrix &m);
+        friend ostream &operator<<(ostream &out,const Matrix &m);
+        bool isSquare()const;
+        bool isSymetric()const;
+        bool isIdentity()const;
+        bool isNull()const;
+        bool isDiagonal()const;
+        bool isTranspose(const Matrix &m)const;
+        bool isDiagonallyDominant()const;
+        void makeDiagonallyDominant();
+        Matrix transpose()const;
+        double determinant()const;
+        Matrix inverse()const;
 };
+
+#endif

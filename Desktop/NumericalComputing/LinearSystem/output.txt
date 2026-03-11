@@ -1,0 +1,72 @@
+Matrix A
+4 12 -16 
+12 37 -43 
+-16 -43 98 
+
+Transpose of A
+4 12 -16 
+12 37 -43 
+-16 -43 98 
+
+Determinant = 36
+
+Inverse Matrix
+49.3611 -13.5556 2.11111 
+-13.5556 3.77778 -0.555556 
+2.11111 -0.555556 0.111111 
+
+Transpose Matrix
+4 12 -16 
+12 37 -43 
+-16 -43 98 
+
+Matrix Addition (A + A)
+8 24 -32 
+24 74 -86 
+-32 -86 196 
+
+
+Matrix Subtraction (A - A)
+0 0 0 
+0 0 0 
+0 0 0 
+
+
+Matrix Multiplication (A * A)
+416 1180 -2148 
+1180 3362 -5997 
+-2148 -5997 11709 
+
+
+Gaussian Elimination (Partial Pivot)
+Solution Vector
+x1 = 3
+
+Crout Method
+
+ crout L matrix is:
+4 0 0 
+37 -154 0 
+98 -294 140 
+
+ crout U matrix is:
+1 3 -4 
+0 1 -0.857143 
+0 0 1 
+
+Doolittle Method
+
+ Doolittle L matrix is:
+1 0 0 
+9.25 1 0 
+24.5 1.90909 1 
+
+ Doolittle U matrix is:
+4 12 -16 
+0 -154 132 
+0 0 140 
+
+Cholesky Method
+2 0 0 
+18.5 nan 0 
+49 nan nan 
